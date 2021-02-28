@@ -1,2 +1,0 @@
-# prago
-prace tice go
