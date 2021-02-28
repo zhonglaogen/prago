@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>first</title>
+</head>
+<body>
+
+<p>
+    !DOCTYPE html 表示html5
+</p>
+<p>
+<h1>hello {{ .u1.Name }}</h1>
+<h1>hello {{ .m1.Gender }} 出不来后面的了</h1>
+<h1>hello {{ .u1.Age }}</h1>
+hello {{ . }}
+
+</p>
+<hr>
+<h1>定义变量</h1>
+{{ $v1 := 100 }}<br>
+{{ $age := .m1.Age}}<br>
+<hr>
+<h1>移除空格</h1>
+{{- $age -}}
+<hr>
+<h1>if 判断</h1>
+{{ if $v1 }}
+        {{ $v1 }}
+{{else}}
+没有值
+{{end}}
+
+<hr>
+lt小鱼 le小等于
+gt大于 ge大等于
+eq等于 ne不等于<br>
+{{if lt .m1.Age 18}}
+ok
+{{else}}
+no
+{{end}}
+
+<hr>
+遍历 <br>
+{{range $idx,$hobby := .hobby }}
+{{$idx}} - {{$hobby}}<br>
+{{else}}
+没啥爱好
+{{end}}
+
+<hr>
+with的用法,作用域,别名 <br>
+{{with  .u1}}
+<h1>hello {{ .Name }}</h1>
+{{end}}
+{{index .hobby 1}}
+
+
+</body>
+</html>

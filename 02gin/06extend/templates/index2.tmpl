@@ -1,0 +1,7 @@
+{{/*继承跟模版,继承数据用. 默认为名字渲染,可以用define name声明*/}}
+{{template "base.tmpl" .}}
+{{/*重新定义块模版*/}}
+{{define "content"}}
+<h1>这是index2</h1>
+<h1>hello {{.}}</h1>
+{{end}}

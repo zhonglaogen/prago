@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>xss攻击</title>
+</head>
+<body>
+
+<p>
+    html包可以防止js的注入.text包会注入js<br>
+    !DOCTYPE html 表示html5<br>
+</p>
+<p>
+    hello {{.str}} {{.str2}} {{.str2 | safe}}
+</p>
+</body>
+</html>
